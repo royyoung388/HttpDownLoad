@@ -16,8 +16,8 @@ public class FileUtils {
 
             //断点续传
             long startIndex = 0;
-            if (file.exists() && file.length() > 0) {
-                startIndex = file.length() - 1;
+            if (file.exists()) {
+                startIndex = file.length();
             }
 
             bis.skip(startIndex);
@@ -29,7 +29,7 @@ public class FileUtils {
             }
             //bis.flush();
 
-            raf.close();
+            rsaf.close();
             bis.close();
             is.close();
         } catch (FileNotFoundException e) {
