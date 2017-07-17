@@ -29,7 +29,7 @@ public class FileUtils {
             }
             //bis.flush();
 
-            rsaf.close();
+            raf.close();
             bis.close();
             is.close();
         } catch (FileNotFoundException e) {
